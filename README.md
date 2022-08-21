@@ -21,17 +21,6 @@ sudo apt-get install python3-opencv
 sudo pip3 install flask
 
 
-Wfi Settings for Raspbian OS
-File Name: wpa_supplicant.conf
-Contents:
-  country="YOUR COUNTRY CODE"
-  ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-  network={
-        ssid="YOUR_NETWORK_NAME"
-        psk="YOUR_PASSWORD"
-        key_mgmt=WPA-PSK
-  }
-
 
 Known Issues
 if you face any issue while installing library like python3-opencv or flask,
