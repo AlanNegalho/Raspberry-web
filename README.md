@@ -1,6 +1,8 @@
 streaming de video ultilizando raspiberry pi 3, flask, open cv
 
-Necessário instalar algumas Bibliotecas essenciais
+Criar uma virtualenv
+
+Apos criar a virtualenv e necessário instalar algumas Bibliotecas essenciais
 
 sudo apt-get install python3-opencv
 
