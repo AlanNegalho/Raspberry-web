@@ -4,11 +4,14 @@ import numpy
 import imutils
 from flask import Flask, render_template, Response, stream_with_context, request
 
+#ligar 2 cameras
+#pi-camera ou webcan
+
 video = cv2.VideoCapture(0, cv2.CAP_V4L2)
 video1 = cv2.VideoCapture(1, cv2.CAP_V4L2)
 app = Flask('__name__')
 
-
+#camera 1
 def video_stream():
     while True:
         ret, frame = video.read()
@@ -18,7 +21,7 @@ def video_stream():
             ret, buffer = cv2.imencode('.jpeg',frame)
             frame = buffer.tobytes()
             yield (b' --frame\r\n' b'Content-type: imgae/jpeg\r\n\r\n' + frame +b'\r\n')           
-
+#camera 2
 def webcam():
     while True:
         ret1, frame = video1.read()
