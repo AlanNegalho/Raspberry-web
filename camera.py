@@ -31,12 +31,10 @@ def webcam():
             ret1, buffer = cv2.imencode('.jpeg',frame)
             frame = buffer.tobytes()
             yield (b' --frame\r\n' b'Content-type: imgae/jpeg\r\n\r\n' + frame +b'\r\n')
-                                
 
 @app.route('/')
 def camera():
     return render_template('camera.html')
-
 
 @app.route('/video_feed')
 def video_feed():
