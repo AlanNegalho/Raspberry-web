@@ -23,7 +23,7 @@ pip3 install virtualenv
 Crie um ambiente virtual dentro da pasta do projeto
 
 ```
-python3 venv venv
+python3 -m venv venv
 ```
 <h3>É necessário instalar algumas Bibliotecas essenciais</h3>
 
